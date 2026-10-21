@@ -103,6 +103,10 @@ outputs/                generated model artifacts and reports
 
 `Python` · `pandas` · `NumPy` · `scikit-learn` · `matplotlib` · `joblib` · `pytest` · `GitHub Actions`
 
+## Reproducibility
+
+The synthetic cohort generator uses a fixed NumPy seed (`7`), train/validation/test splits use `random_state=42`, and permutation importance uses `random_state=1`. This keeps the demo reproducible across repeated runs with the same dependency versions. Small numerical differences can still occur across library or platform versions.
+
 ## Responsible-use note
 
 The included cohort is synthetic. This project is an ML engineering demonstration only; it is **not a medical device, diagnostic model, or clinical decision-support system** and should not be used for patient care.
